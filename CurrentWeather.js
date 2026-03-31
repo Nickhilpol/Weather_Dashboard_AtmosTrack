@@ -93,9 +93,9 @@ const CurrentWeather = ({ coords }) => {
     <div className={`main-ui ${getWeatherTheme()}`}>
 
       {/* ✅ NAVBAR ADDED (ONLY UI) */}
-     <div className="navbar-title">
-  <span>🌤</span> AtmosTrack
-</div>
+      <div className="navbar">
+        <div className="navbar-title">🌤 AtmosTrack</div>  
+      </div>
 <h1
   style={{
     fontFamily: 'Poppins, sans-serif',
