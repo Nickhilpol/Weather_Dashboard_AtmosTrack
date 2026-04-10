@@ -1,17 +1,16 @@
-/* 🔥 REMOVE DEFAULT SPACE */
+
 body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* prevent horizontal scroll */
+  overflow-x: hidden; 
 }
 
-/* 🔥 ROOT FIX (React) */
 #root {
   margin: 0;
   padding: 0;
 }
 
-/* 🌤 MAIN UI BASE */
+
 .main-ui {
   position: relative;
   min-height: 100vh;
@@ -25,9 +24,7 @@ body, html {
   padding-top: 80px;
 }
 
-/* =========================
-   🌟 UNIVERSAL ANIMATION
-========================= */
+
 .main-ui::before {
   content: "";
   position: fixed;
@@ -40,15 +37,14 @@ body, html {
   z-index: -1;
 }
 
-/* 🌧 RAIN */
-/* 🌧 RAIN (DOT STYLE - BIGGER DROPS) */
+
 .main-ui.rainy::before {
   background: radial-gradient(circle, rgba(255,255,255,0.9) 3px, transparent 5px);
   background-size: 60px 60px;   /* 🔥 smaller grid = more drops */
   animation: rainDrop 1s linear infinite;
 }
 
-/* 🌧 RAIN FALL EFFECT */
+
 @keyframes rainDrop {
   0% {
     background-position: 0 0;
@@ -58,7 +54,6 @@ body, html {
   }
 }
 
-/* ☀ SUNNY */
 .main-ui.sunny::before {
   background: radial-gradient(circle, rgba(255,255,255,0.6) 2px, transparent 9px);
   background-size: 80px 80px;
@@ -70,7 +65,6 @@ body, html {
   to { background-position: 200px 200px; }
 }
 
-/* ❄ COLD */
 .main-ui.cold::before {
   background: radial-gradient(circle, white 2px, transparent 3px);
   background-size: 50px 50px;
@@ -82,7 +76,6 @@ body, html {
   to { background-position: 100px 300px; }
 }
 
-/* 🌬 WIND */
 .main-ui.windy::before {
   background: radial-gradient(circle, rgba(255,255,255,0.5) 2px, transparent 3px);
   background-size: 60px 60px;
@@ -94,7 +87,6 @@ body, html {
   to { background-position: 300px 0; }
 }
 
-/* 🌫 POLLUTED */
 .main-ui.polluted::before {
   background: radial-gradient(circle, rgba(120,120,120,0.4) 4px, transparent 6px);
   background-size: 100px 100px;
@@ -106,7 +98,6 @@ body, html {
   to { background-position: 0 400px; }
 }
 
-/* 🌬 WIND → SIDE FLOW */
 .main-ui.windy::before {
   background: radial-gradient(circle, rgba(255,255,255,0.5) 2px, transparent 3px);
   background-size: 60px 60px;
@@ -122,7 +113,6 @@ body, html {
   }
 }
 
-/* 🌫 POLLUTED → SMOKE */
 .main-ui.polluted::before {
   background: radial-gradient(circle, rgba(120,120,120,0.4) 4px, transparent 6px);
   background-size: 100px 100px;
@@ -138,28 +128,23 @@ body, html {
   }
 }
 
-/* ☀ SUNNY */
 .sunny {
   background: linear-gradient(to right, #fceabb, #f8b500);
 }
 
-/* 🌧 RAIN */
 .rainy {
   background: linear-gradient(to right, #4e54c8, #8f94fb);
 }
 
-/* ❄ COLD */
 .cold {
   background: linear-gradient(to right, #83a4d4, #b6fbff);
 }
 
-/* 🌬 WIND */
 .windy {
   background: linear-gradient(to right, #bdc3c7, #2c3e50);
   color: white;
 }
 
-/* 📦 CARD */
 .section {
   background: rgba(255, 255, 255, 0.95);
   padding: 15px;
@@ -168,7 +153,6 @@ body, html {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* 📊 HEADINGS */
 h2 {
   text-align: center;
   font-weight: 600;
@@ -179,7 +163,6 @@ h3 {
   margin-bottom: 12px;
 }
 
-/* 🔘 BUTTON */
 button {
   margin-left: 10px;
   padding: 6px 12px;
@@ -194,14 +177,12 @@ button:hover {
   background: #007bff;
 }
 
-/* 📱 MOBILE */
 @media (max-width: 600px) {
   .section {
     font-size: 14px;
   }
 }
 
-/* 🌐 NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -224,25 +205,22 @@ button:hover {
   isolation: isolate;   /* 🔥🔥 FINAL MAGIC FIX */
 }
 
-/* 🌤 TITLE LEFT */
 .navbar-title {
   font-size: 24px;
   font-weight: 600;
   color: white;
 }
 
-/* 📑 NAV LINKS RIGHT */
 .navbar-links {
   display: flex;
   gap: 10px;
   position: relative;
-  z-index: 1001;   /* 🔥 FIX */
+  z-index: 1001;   
 }
 
-/* 🔥 FIXED BUTTON VISIBILITY */
 .navbar-links button {
-  background: #ffffff;        /* solid white */
-  color: #000;                /* strong black text */
+  background: #ffffff;        
+  color: #000;
   border-radius: 20px;
   padding: 6px 16px;
   font-weight: 600;
@@ -254,22 +232,18 @@ button:hover {
   z-index: 1002; 
 }
 
-/* 🔘 HOVER */
 .navbar-links button:hover {
   background: #007bff;
   color: white;
 }
 
 
-/* PAGE 2 CSS*/
 
-/* 🌫 POLLUTION THEME (NEW) */
 .polluted {
   background: linear-gradient(to right, #434343, #000000);
   color: white;
 }
 
-/* Optional glow effect */
 .polluted .section {
   background: rgba(255,255,255,0.08);
   color: white;
@@ -289,17 +263,16 @@ button:hover {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* 📱 MOBILE FIX FOR NAVBAR TITLE */
 @media (max-width: 600px) {
   .navbar-title {
-    font-size: 18px;          /* smaller text */
+    font-size: 18px;         
     display: flex;
     align-items: center;
     gap: 5px;
-    white-space: nowrap;      /* 🔥 prevent line break */
+    white-space: nowrap;      
   }
 
   .navbar-title span {
-    font-size: 18px;          /* 🔥 control emoji size */
+    font-size: 18px;         
   }
 }
