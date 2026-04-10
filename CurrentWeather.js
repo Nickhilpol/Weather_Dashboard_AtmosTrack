@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"; // CurrentWeather
+import React, { useEffect, useState } from "react"; 
 import { getWeatherData, getAirQuality } from "../services/weatherService";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -16,7 +16,7 @@ const CurrentWeather = ({ coords }) => {
 
   const [showPopup, setShowPopup] = useState(false);
 
-  // ✅ THEME FUNCTION
+
   const getWeatherTheme = () => {
     if (!data) return "sunny";
 
@@ -31,7 +31,7 @@ const CurrentWeather = ({ coords }) => {
     return "sunny";
   };
 
-  // ✅ Fetch Data
+
   useEffect(() => {
     if (!coords) return;
 
@@ -92,7 +92,7 @@ const CurrentWeather = ({ coords }) => {
   return (
     <div className={`main-ui ${getWeatherTheme()}`}>
 
-      {/* ✅ NAVBAR ADDED (ONLY UI) */}
+     
       <div className="navbar">
         <div className="navbar-title">🌤 AtmosTrack</div>  
       </div>
