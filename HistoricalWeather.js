@@ -1,4 +1,4 @@
-import React, { useState } from "react";// HistoricalWeather
+import React, { useState } from "react";
 import {
   getHistoricalData,
   getHistoricalAirQuality
@@ -19,7 +19,7 @@ const HistoricalWeather = ({ coords }) => {
     return data.filter((_, i) => i % step === 0);
   };
 
-  // ✅ THEME LOGIC (FIXED POSITION)
+
   const getHistoricalTheme = () => {
     if (!data) return "sunny";
 
@@ -35,10 +35,10 @@ const HistoricalWeather = ({ coords }) => {
         air.hourly.pm2_5.length
       : 0;
 
-    if (avgPM25 > 80) return "polluted";  // 🌫 POLLUTED → Dark Purple/Gray 
-    if (maxRain > 50) return "rainy"; // 🌧 RAINY → Blue Gradient
-    if (avgTemp < 15) return "cold";   // ❄ COLD → Light Blue
-    if (maxWind > 30) return "windy"; // 🌬 WINDY → Gray/Dark
+    if (avgPM25 > 80) return "polluted";  
+    if (maxRain > 50) return "rainy"; 
+    if (avgTemp < 15) return "cold";   
+    if (maxWind > 30) return "windy"; 
 
     return "sunny";
   };
