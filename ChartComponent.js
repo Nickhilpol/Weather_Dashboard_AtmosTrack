@@ -1,4 +1,4 @@
-import React from "react"; //chartComponents
+import React from "react"; 
 import {
   LineChart,
   Line,
