@@ -7,13 +7,10 @@ const cache = {};
 
 const getKey = (lat, lon) => `${lat}-${lon}`;
 
-//////////////////////////////////////////////////////
-// ✅ CURRENT WEATHER API
-//////////////////////////////////////////////////////
+
 export const getWeatherData = async (lat, lon) => {
   const key = getKey(lat, lon);
 
-  // ✅ Check cache
   if (cache[key]) {
     console.log("Using cached current weather");
     return cache[key];
@@ -47,7 +44,6 @@ export const getWeatherData = async (lat, lon) => {
       }
     });
 
-    // ✅ Save in cache
     cache[key] = response.data;
 
     return response.data;
@@ -58,9 +54,6 @@ export const getWeatherData = async (lat, lon) => {
   }
 };
 
-//////////////////////////////////////////////////////
-// ✅ HISTORICAL WEATHER API (THIS FIXES YOUR ERROR)
-//////////////////////////////////////////////////////
 export const getHistoricalData = async (lat, lon, start, end) => {
   try {
     const response = await axios.get(
@@ -94,7 +87,6 @@ export const getHistoricalData = async (lat, lon, start, end) => {
   }
 };
 
-// ✅ AIR QUALITY API
 export const getAirQuality = async (lat, lon) => {
   try {
     const response = await axios.get(
@@ -125,7 +117,6 @@ export const getAirQuality = async (lat, lon) => {
   }
 };
 
-// Historical AirQuality API
 export const getHistoricalAirQuality = async (lat, lon, start, end) => {
   try {
     const res = await axios.get(
